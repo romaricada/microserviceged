@@ -1,0 +1,51 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "mena.gov.bf"
+    },
+    "jhipsterVersion": "6.5.0",
+    "applicationType": "microservice",
+    "baseName": "microserviceged",
+    "packageName": "mena.gov.bf",
+    "packageFolder": "mena/gov/bf",
+    "serverPort": "8081",
+    "authenticationType": "jwt",
+    "cacheProvider": "hazelcast",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "postgresql",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "MjNiZjdiNDk5MGM4MjE4ODI4YzRiNjZkOTRhNTU3YmNkMWRmMWYxMzkzYjAzMzI5OWI0MzNjNzVmZjg0ZDRkNDkwOTNkNjlmNjU4Zjc0NmEyYTQ3NzViMWIzZTliYjNkNjI5ZQ==",
+    "embeddableLaunchScript": false,
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "enableTranslation": true,
+    "clientPackageManager": "npm",
+    "blueprints": [],
+    "skipClient": true,
+    "skipUserManagement": true,
+    "languages": [
+      "en",
+      "fr"
+    ],
+    "nativeLanguage": "en",
+    "otherModules": []
+  },
+  "entities": [
+    "Entrepot",
+    "Locale",
+    "TypeEntrepot",
+    "Document",
+    "TypeArchive",
+    "TypeDocument",
+    "Serveur"
+  ]
+}

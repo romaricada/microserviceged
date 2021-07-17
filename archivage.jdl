@@ -1,0 +1,70 @@
+
+entity Entrepot {
+    libelle String required,
+    deleted Boolean required
+
+}
+entity Locale {
+    libelle String required,
+   adresseLocale String required,
+    deleted Boolean required
+}
+entity TypeEntrepot {
+    libelle String required,
+    deleted Boolean required
+}
+entity Document {
+    libelle String required,
+    code String required,
+    date LocalDate required,
+    uniteAdministrativeId Long,
+    deleted Boolean required
+}
+entity TypeArchive {
+   libelle  String required,
+    deleted Boolean required
+}
+entity TypeDocument {
+    libelle String required,
+    deleted Boolean required
+}
+entity Serveur {
+    adresse Boolean required,
+    port  Integer required,
+    nomServeur String required,
+    deleted Boolean required
+}
+
+relationship OneToMany {
+    Locale{entrepots} to Entrepot{local}
+    Entrepot{documents} to Document{entrepot}
+    TypeEntrepot{entrepots} to Entrepot{typeEntrepot}
+    TypeArchive{documents} to Document{typeArchivage}
+    TypeDocument{documents} to Document{typeDocument}
+}
+relationship ManyToOne {
+    Entrepot{entrepot} to Entrepot
+}
+
+service * with serviceClass
+dto * with mapstruct
+paginate * with pagination
+
+application {
+  config {
+    baseName microserviceged
+    applicationType microservice
+    authenticationType jwt
+    devDatabaseType postgresql
+    prodDatabaseType postgresql
+    packageName mena.gov.bf
+    //searchEngine elasticsearch
+  }
+  entities *
+}
+
+skipClient *
+//skipServer *
+
+//microservice * with microserviceged
+

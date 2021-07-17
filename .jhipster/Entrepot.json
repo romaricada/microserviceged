@@ -1,0 +1,62 @@
+{
+    "name": "Entrepot",
+    "fields": [
+        {
+            "fieldName": "libelle",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "deleted",
+            "fieldType": "Boolean",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "document",
+            "otherEntityRelationshipName": "entrepot",
+            "relationshipName": "documents"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "entrepot",
+            "otherEntityRelationshipName": "entrepot",
+            "relationshipName": "entrepot",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "locale",
+            "otherEntityRelationshipName": "entrepots",
+            "relationshipName": "local",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "typeEntrepot",
+            "otherEntityRelationshipName": "entrepots",
+            "relationshipName": "typeEntrepot",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200602182555",
+    "entityTableName": "entrepot",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "microserviceged",
+    "applications": [
+        "microserviceged"
+    ],
+    "skipClient": true,
+    "microserviceName": "microserviceged"
+}

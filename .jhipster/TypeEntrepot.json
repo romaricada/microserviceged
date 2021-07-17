@@ -1,0 +1,41 @@
+{
+    "name": "TypeEntrepot",
+    "fields": [
+        {
+            "fieldName": "libelle",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "deleted",
+            "fieldType": "Boolean",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "entrepot",
+            "otherEntityRelationshipName": "typeEntrepot",
+            "relationshipName": "entrepots"
+        }
+    ],
+    "changelogDate": "20200602182557",
+    "entityTableName": "type_entrepot",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "microserviceged",
+    "applications": [
+        "microserviceged"
+    ],
+    "skipClient": true,
+    "microserviceName": "microserviceged"
+}
